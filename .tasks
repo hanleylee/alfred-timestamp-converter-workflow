@@ -1,0 +1,7 @@
+[file-build-run]
+command:python=python2 "$(VIM_FILENAME)"
+pos=quickfix
+output=terminal
+cwd=$(VIM_FILEDIR)
+
+; vim:ft=dosini:ts=4:sw=4:
