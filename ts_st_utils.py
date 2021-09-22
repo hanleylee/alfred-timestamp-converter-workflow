@@ -67,10 +67,10 @@ def output(timestamp, wf):
 
         menu_items = [
             (str(int(ts)), 'Time Stamp'),
-            (utc_date_time, 'UTC Date Time'),
-            (utc_date, 'UTC Date'),
             (cn_date_time, 'CN Date Time'),
             (cn_date, 'CN Date'),
+            (utc_date_time, 'UTC Date Time'),
+            (utc_date, 'UTC Date'),
         ]
 
         for item in menu_items:
