@@ -24,7 +24,7 @@ This Alfred Workflow aims to convert between *TimeStamp* and *Date String*
 
 **First of all, you must set your local timezone by type `setzone` in your Alfred to let this plugin know how to show!**
 
-![setzone_video](resource/set_zone.mp4)
+![setzone_video](resource/set_zone.gif)
 
 ## Usage
 
@@ -33,13 +33,13 @@ This Alfred Workflow aims to convert between *TimeStamp* and *Date String*
 
 ### ts
 
-![ts_video](./resource/ts.mp4)
+![ts_video](./resource/ts.gif)
 
 You can also use `ts ms 1633611316000` to specify it to using **millisecond**. This workflow will use **second** by default
 
 ### st
 
-![st_video](resource/st.mp4)
+![st_video](resource/set_zone.gif)
 
 ## TODO
 
