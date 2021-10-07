@@ -1,5 +1,6 @@
 [file-build-run]
 command:python=python2 "$(VIM_FILENAME)"
+command:markdown=:MarkdownPreview
 pos=quickfix
 output=terminal
 cwd=$(VIM_FILEDIR)

@@ -8,11 +8,37 @@
 	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
+		<key>05C63F75-A092-46A1-9966-07316718BA58</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C921B490-3ADB-427C-AD1D-2B5161498D20</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>A88445F6-3F01-48C7-9510-88F8C6B53340</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>A6596CBD-6AA2-4D9B-88D7-90A261C66414</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>BC00793C-913A-475A-8097-1ABC863AE1CA</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>05C63F75-A092-46A1-9966-07316718BA58</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -38,32 +64,13 @@
 	<key>createdby</key>
 	<string>Hanley Lee</string>
 	<key>description</key>
-	<string>Convert between timestamp and date time</string>
+	<string>Convert between Timestamp and Date String</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
 	<string>Timestamp Converter</string>
 	<key>objects</key>
 	<array>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>A6596CBD-6AA2-4D9B-88D7-90A261C66414</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -92,7 +99,7 @@
 				<key>runningsubtext</key>
 				<string>Place wait...</string>
 				<key>script</key>
-				<string>python2 ts.py "{query}"</string>
+				<string>python2 src/ts.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -110,6 +117,67 @@
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>A88445F6-3F01-48C7-9510-88F8C6B53340</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>A6596CBD-6AA2-4D9B-88D7-90A261C66414</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>python2 src/list_zone.py "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>B6EF9C88-204D-4E03-93C5-7B69B6E96112</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>9995C2EF-B30E-4831-B813-C29501FA32F9</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -141,7 +209,7 @@
 				<key>runningsubtext</key>
 				<string>Place Wait...</string>
 				<key>script</key>
-				<string>python2 st.py "{query}"</string>
+				<string>python2 src/st.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -165,40 +233,121 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
+				<key>lastpathcomponent</key>
 				<false/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
+				<key>onlyshowifquerypopulated</key>
 				<false/>
-				<key>transient</key>
+				<key>removeextension</key>
 				<false/>
+				<key>text</key>
+				<string>Your Time Zone was saved!</string>
+				<key>title</key>
+				<string>Saved Time Zone</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
+			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
-			<string>9995C2EF-B30E-4831-B813-C29501FA32F9</string>
+			<string>C921B490-3ADB-427C-AD1D-2B5161498D20</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>setzone</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Place Wait...</string>
+				<key>script</key>
+				<string>python2 src/list_zone.py "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Your settings will store in your Keychain</string>
+				<key>title</key>
+				<string>Set your Time Zone</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>BC00793C-913A-475A-8097-1ABC863AE1CA</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>python2 src/confirm_zone.py "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>05C63F75-A092-46A1-9966-07316718BA58</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string>This Alfred Workflow aims to convert between TimeStamp and Date String</string>
 	<key>uidata</key>
 	<dict>
+		<key>05C63F75-A092-46A1-9966-07316718BA58</key>
+		<dict>
+			<key>xpos</key>
+			<integer>465</integer>
+			<key>ypos</key>
+			<integer>405</integer>
+		</dict>
 		<key>9995C2EF-B30E-4831-B813-C29501FA32F9</key>
 		<dict>
 			<key>xpos</key>
 			<integer>515</integer>
 			<key>ypos</key>
-			<integer>230</integer>
+			<integer>225</integer>
 		</dict>
 		<key>A6596CBD-6AA2-4D9B-88D7-90A261C66414</key>
 		<dict>
 			<key>xpos</key>
-			<integer>510</integer>
+			<integer>515</integer>
 			<key>ypos</key>
-			<integer>65</integer>
+			<integer>75</integer>
 		</dict>
 		<key>A88445F6-3F01-48C7-9510-88F8C6B53340</key>
 		<dict>
@@ -207,6 +356,20 @@
 			<key>ypos</key>
 			<integer>75</integer>
 		</dict>
+		<key>B6EF9C88-204D-4E03-93C5-7B69B6E96112</key>
+		<dict>
+			<key>xpos</key>
+			<integer>750</integer>
+			<key>ypos</key>
+			<integer>215</integer>
+		</dict>
+		<key>BC00793C-913A-475A-8097-1ABC863AE1CA</key>
+		<dict>
+			<key>xpos</key>
+			<integer>145</integer>
+			<key>ypos</key>
+			<integer>405</integer>
+		</dict>
 		<key>BF187E9A-9761-47E7-8E03-EE472107825A</key>
 		<dict>
 			<key>xpos</key>
@@ -214,11 +377,18 @@
 			<key>ypos</key>
 			<integer>225</integer>
 		</dict>
+		<key>C921B490-3ADB-427C-AD1D-2B5161498D20</key>
+		<dict>
+			<key>xpos</key>
+			<integer>755</integer>
+			<key>ypos</key>
+			<integer>405</integer>
+		</dict>
 	</dict>
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>0.0.1</string>
+	<string>0.0.2</string>
 	<key>webaddress</key>
 	<string>https://www.hanleylee.com</string>
 </dict>
