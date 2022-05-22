@@ -1,29 +1,26 @@
-#! /usr/bin/env python2
+#! /usr/bin/env python3
 # encoding: utf-8
 
-import sys
 from dateutil.parser import parse
-from workflow import Workflow
 import time
-from ts_st_utils import output_for_default, now_str, main_output
+from variable import *
+from utils import res_for_default, now_str, res_for_general, output_to_alfred
 
+def main():
 
-def main(wf):
-    log.debug('Started')
-
-    arg0 = wf.args[0]
-    if arg0 == '' or arg0 == ' ':
-        output_for_default(wf)
+    args = QUERY_STR
+    res = []
+    if args == '' or args == ' ':
+        res = res_for_default()
     else:
         try:
-            dt = parse(arg0)
+            dt = parse(args)
         except BaseException:
             dt = now_str()
         ts = time.mktime(dt.timetuple())
-        main_output(wf, ts, 1)
+        res = res_for_general(ts, 1)
 
+    output_to_alfred(res)
 
 if __name__ == "__main__":
-    wf = Workflow()
-    log = wf.logger
-    sys.exit(wf.run(main))
+    main()

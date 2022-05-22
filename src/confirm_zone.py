@@ -1,15 +1,16 @@
-#! /usr/bin/env python2
+#! /usr/bin/env python3
 # encoding: utf-8
 
 import sys
-from workflow import Workflow
+from keychain import setpassword
+from variable import *
 
-def main(wf):
+file_name = sys.argv[0]
+picked_zone = sys.argv[1]
 
-    arg0 = wf.args[0]
-    wf.save_password('ts_timezone', arg0)
+def main():
+
+    setpassword(SERVICE, TIMEZONE_ID, picked_zone)
 
 if __name__ == "__main__":
-    wf = Workflow()
-    log = wf.logger
-    sys.exit(wf.run(main))
+    main()

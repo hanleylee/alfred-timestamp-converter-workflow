@@ -99,7 +99,7 @@
 				<key>runningsubtext</key>
 				<string>Place wait...</string>
 				<key>script</key>
-				<string>python2 src/ts.py "{query}"</string>
+				<string>python3 src/ts.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -138,29 +138,6 @@
 			<string>A6596CBD-6AA2-4D9B-88D7-90A261C66414</string>
 			<key>version</key>
 			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>python2 src/list_zone.py "{query}"</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>B6EF9C88-204D-4E03-93C5-7B69B6E96112</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -209,7 +186,7 @@
 				<key>runningsubtext</key>
 				<string>Place Wait...</string>
 				<key>script</key>
-				<string>python2 src/st.py "{query}"</string>
+				<string>python3 src/st.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -233,23 +210,25 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
+				<key>concurrently</key>
 				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>Your Time Zone was saved!</string>
-				<key>title</key>
-				<string>Saved Time Zone</string>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>python3 src/confirm_zone.py "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>C921B490-3ADB-427C-AD1D-2B5161498D20</string>
+			<string>05C63F75-A092-46A1-9966-07316718BA58</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -279,7 +258,7 @@
 				<key>runningsubtext</key>
 				<string>Place Wait...</string>
 				<key>script</key>
-				<string>python2 src/list_zone.py "{query}"</string>
+				<string>python3 src/set_zone.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -303,25 +282,23 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
+				<key>lastpathcomponent</key>
 				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>python2 src/confirm_zone.py "{query}"</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Your Time Zone was saved!</string>
+				<key>title</key>
+				<string>Saved Time Zone</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
-			<string>05C63F75-A092-46A1-9966-07316718BA58</string>
+			<string>C921B490-3ADB-427C-AD1D-2B5161498D20</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -356,13 +333,6 @@
 			<key>ypos</key>
 			<integer>75</integer>
 		</dict>
-		<key>B6EF9C88-204D-4E03-93C5-7B69B6E96112</key>
-		<dict>
-			<key>xpos</key>
-			<integer>750</integer>
-			<key>ypos</key>
-			<integer>215</integer>
-		</dict>
 		<key>BC00793C-913A-475A-8097-1ABC863AE1CA</key>
 		<dict>
 			<key>xpos</key>
@@ -388,7 +358,7 @@
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>0.0.2</string>
+	<string>0.0.3</string>
 	<key>webaddress</key>
 	<string>https://www.hanleylee.com</string>
 </dict>

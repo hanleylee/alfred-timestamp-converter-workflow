@@ -39,7 +39,7 @@ You can also use `ts ms 1633611316000` to specify it to using **millisecond**. T
 
 ### st
 
-![st_video](resource/set_zone.gif)
+![st_video](resource/st.gif)
 
 ## TODO
 

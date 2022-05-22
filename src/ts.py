@@ -1,19 +1,15 @@
-#! /usr/bin/env python2
+#! /usr/bin/env python3
 # encoding: utf-8
 
-import sys
-from workflow import Workflow
-from ts_st_utils import output_for_default, main_output
+from utils import res_for_default, res_for_general, output_to_alfred
+from variable import *
 
-log = None
+def main():
 
-def main(wf):
-    log.debug('Started')
-
-    args = wf.args[0]
-    args = args.split(' ')
-    if wf.args[0] == '' or wf.args[0] == ' ':
-        output_for_default(wf)
+    res = []
+    args = QUERY_STR.split(' ')
+    if args[0] == '' or args[0] == ' ':
+        res = res_for_default()
     else:
         arg0 = args[0]
         trimmed_timestamp = 0
@@ -27,10 +23,9 @@ def main(wf):
             trimmed_timestamp = arg1
         else:
             trimmed_timestamp = arg0
-        main_output(wf, trimmed_timestamp, level)
+        res = res_for_general(trimmed_timestamp, level)
 
+    output_to_alfred(res)
 
 if __name__ == "__main__":
-    wf = Workflow()
-    log = wf.logger
-    sys.exit(wf.run(main))
+    main()
