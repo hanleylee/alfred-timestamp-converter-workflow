@@ -142,6 +142,5 @@ prefs.plist
 /src/libs/
 
 # Lock file
-poetry.lock
 requirements.txt
 
