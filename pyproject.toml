@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "Alfred Timestamp Converter"
+version = "0.0.3"
+description = "Alfre Timestamp Converter"
+documentation = ""
+license = "MIT"
+
+authors = [
+    "HanleyLee <hanley.lei@gmail.com>"
+]
+repository = "https://github.com/hanleylee/alfred-timestamp-converter-workflow"
+homepage = "https://github.com/hanleylee/alfred-timestamp-converter-workflow"
+readme = ["README.md", "LICENSE"]
+keywords = ["alfred", "timestamp", "workflow"]
+
+[tool.poetry.dependencies]
+python = ">=3.9, <4.0"
+python-dateutil = "*"
+pytz = "*"

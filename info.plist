@@ -87,7 +87,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>ts</string>
+				<string>{var:timestamp_keyword}</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -99,7 +99,7 @@
 				<key>runningsubtext</key>
 				<string>Place wait...</string>
 				<key>script</key>
-				<string>python3 src/ts.py "{query}"</string>
+				<string>PYTHONPATH=$(pwd)/src/libs python3 src/ts.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -174,7 +174,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>st</string>
+				<string>{var:form_time_keyword}</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -186,7 +186,7 @@
 				<key>runningsubtext</key>
 				<string>Place Wait...</string>
 				<key>script</key>
-				<string>python3 src/st.py "{query}"</string>
+				<string>PYTHONPATH=$(pwd)/src/libs python3 src/st.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -215,7 +215,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python3 src/confirm_zone.py "{query}"</string>
+				<string>PYTHONPATH=$(pwd)/src/libs python3 src/confirm_zone.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -258,7 +258,7 @@
 				<key>runningsubtext</key>
 				<string>Place Wait...</string>
 				<key>script</key>
-				<string>python3 src/set_zone.py "{query}"</string>
+				<string>PYTHONPATH=$(pwd)/src/libs python3 src/set_zone.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -308,57 +308,102 @@
 		<key>05C63F75-A092-46A1-9966-07316718BA58</key>
 		<dict>
 			<key>xpos</key>
-			<integer>465</integer>
+			<real>515</real>
 			<key>ypos</key>
-			<integer>405</integer>
+			<real>405</real>
 		</dict>
 		<key>9995C2EF-B30E-4831-B813-C29501FA32F9</key>
 		<dict>
 			<key>xpos</key>
-			<integer>515</integer>
+			<real>515</real>
 			<key>ypos</key>
-			<integer>225</integer>
+			<real>225</real>
 		</dict>
 		<key>A6596CBD-6AA2-4D9B-88D7-90A261C66414</key>
 		<dict>
 			<key>xpos</key>
-			<integer>515</integer>
+			<real>515</real>
 			<key>ypos</key>
-			<integer>75</integer>
+			<real>75</real>
 		</dict>
 		<key>A88445F6-3F01-48C7-9510-88F8C6B53340</key>
 		<dict>
 			<key>xpos</key>
-			<integer>155</integer>
+			<real>155</real>
 			<key>ypos</key>
-			<integer>75</integer>
+			<real>75</real>
 		</dict>
 		<key>BC00793C-913A-475A-8097-1ABC863AE1CA</key>
 		<dict>
 			<key>xpos</key>
-			<integer>145</integer>
+			<real>150</real>
 			<key>ypos</key>
-			<integer>405</integer>
+			<real>405</real>
 		</dict>
 		<key>BF187E9A-9761-47E7-8E03-EE472107825A</key>
 		<dict>
 			<key>xpos</key>
-			<integer>150</integer>
+			<real>150</real>
 			<key>ypos</key>
-			<integer>225</integer>
+			<real>225</real>
 		</dict>
 		<key>C921B490-3ADB-427C-AD1D-2B5161498D20</key>
 		<dict>
 			<key>xpos</key>
-			<integer>755</integer>
+			<real>755</real>
 			<key>ypos</key>
-			<integer>405</integer>
+			<real>405</real>
 		</dict>
 	</dict>
+	<key>userconfigurationconfig</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>ts</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Keyword to input timestamp</string>
+			<key>label</key>
+			<string>Timestamp Keyword</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>timestamp_keyword</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>st</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>You can type any form date time</string>
+			<key>label</key>
+			<string>Formatted Time Keyword</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>form_time_keyword</string>
+		</dict>
+	</array>
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>0.0.3</string>
+	<string>0.0.4</string>
 	<key>webaddress</key>
 	<string>https://www.hanleylee.com</string>
 </dict>
