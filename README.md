@@ -15,6 +15,9 @@ This Alfred Workflow aims to convert between *TimeStamp* and *Date String*
 1. Go to [Releases](https://github.com/HanleyLee/alfred-timestamp-converter-workflow/releases) page to download the latest release file named
    *Timestamp Converter.alfredworkflow*.
 2. Double click `Timestamp Converter.alfredworkflow` in your local folder to install.
+
+    ![import](resource/import.png)
+
 3. Finish!
 
 ## IMPORTANT
