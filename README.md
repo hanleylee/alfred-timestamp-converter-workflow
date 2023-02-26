@@ -13,12 +13,9 @@ This Alfred Workflow aims to convert between *TimeStamp* and *Date String*
 ## Installation
 
 1. Go to [Releases](https://github.com/HanleyLee/alfred-timestamp-converter-workflow/releases) page to download the latest release file named
-   *Timestamp Converter.alfredworkflow*
-2. Double click `Timestamp Converter.alfredworkflow` in your local folder
-
-    ![import](resource/import.png)
-
-3. 安装完成
+   *Timestamp Converter.alfredworkflow*.
+2. Double click `Timestamp Converter.alfredworkflow` in your local folder to install.
+3. Finish!
 
 ## IMPORTANT
 
@@ -49,15 +46,10 @@ You can also use `ts ms 1633611316000` to specify it to using **millisecond**. T
 
 - [deanishe/alfred-workflow](https://github.com/deanishe/alfred-workflow)
 
-## Disclaimer
-
-All codes in directory *src/workflow* / *src/pytz* / *src/dateutil* are dependencies from this project. They're not my work and is the only
-"dependency" for this project. Since it's included in this repo, the workflow user doesn't have to concern about dependencies.
-
 ## License
 
 All codes in this warehouse are distributed and used based on [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0). For the full text of
-the agreement, see [LICENSE](https://github.com/HanleyLee/Handy/blob/main/LICENSE) file.
+the agreement, see [LICENSE](https://github.com/hanleylee/alfred-timestamp-converter-workflow/blob/main/LICENSE) file.
 
 Copyright 2021 HanleyLee
 
