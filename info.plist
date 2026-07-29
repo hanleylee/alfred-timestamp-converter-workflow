@@ -99,7 +99,7 @@
 				<key>runningsubtext</key>
 				<string>Place wait...</string>
 				<key>script</key>
-				<string>PYTHONPATH=$(pwd)/src/libs python3 src/ts.py "{query}"</string>
+				<string>bin/alfred-timestamp-converter ts "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -186,7 +186,7 @@
 				<key>runningsubtext</key>
 				<string>Place Wait...</string>
 				<key>script</key>
-				<string>PYTHONPATH=$(pwd)/src/libs python3 src/st.py "{query}"</string>
+				<string>bin/alfred-timestamp-converter st "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -215,7 +215,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>PYTHONPATH=$(pwd)/src/libs python3 src/confirm_zone.py "{query}"</string>
+				<string>bin/alfred-timestamp-converter confirm-zone "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -258,7 +258,7 @@
 				<key>runningsubtext</key>
 				<string>Place Wait...</string>
 				<key>script</key>
-				<string>PYTHONPATH=$(pwd)/src/libs python3 src/set_zone.py "{query}"</string>
+				<string>bin/alfred-timestamp-converter set-zone "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>

@@ -1,0 +1,19 @@
+[package]
+name = "alfred-timestamp-converter"
+version = "0.1.0"
+edition = "2024"
+description = "Alfred workflow for converting between timestamp and date string"
+
+[[bin]]
+name = "alfred-timestamp-converter"
+path = "src/main.rs"
+
+[dependencies]
+alfred = { git = "https://github.com/hanleylee/alfred-workflow-utils.git", tag = "0.0.5", features = ["script-filter", "updater", "updater-cli"] }
+#alfred = { path = "../alfred-workflow-utils/alfred", features = ["script-filter", "updater", "updater-cli"] }
+chrono = { version = "0.4", default-features = false, features = ["clock", "std"] }
+chrono-tz = "0.10"
+clap = { version = "4", features = ["env", "derive"] }
+dtparse = "2"
+regex = "1"
+tokio = { version = "1", features = ["rt-multi-thread", "macros"] }
