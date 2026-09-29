@@ -1,7 +1,7 @@
 use alfred::core::AlfredUtils;
 use alfred::script_filter::{Icon, Item, ScriptFilter};
 
-use crate::command::update_check::{check_for_update_silently, maybe_append_update_item};
+use crate::command::update_check::maybe_append_update_item;
 use crate::converter::{icon_for_item, items_for_timestamp, parse_ts_query};
 
 pub async fn run_ts(query: &str) -> Result<(), Box<dyn std::error::Error>> {
@@ -23,10 +23,8 @@ pub async fn run_ts(query: &str) -> Result<(), Box<dyn std::error::Error>> {
         ScriptFilter::item(sf_item);
     }
 
-    let need_check = maybe_append_update_item().await;
+    let updater = maybe_append_update_item().await;
     AlfredUtils::output(ScriptFilter::output());
-    if need_check {
-        check_for_update_silently();
-    }
+    updater.check_for_update_silently_if_stale().await;
     Ok(())
 }
